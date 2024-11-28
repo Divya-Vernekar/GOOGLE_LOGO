@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 60px solid blue;
+    border-top: 60px solid red;
+    border-bottom: 60px solid green;
+    border-right: 60px solid blue;
+    border-left: 60px solid yellow;
+    animation: spinAnimate 3s ease-in-out 0s infinite;
+}
+.loader::before{
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: -95px;
+    transform: translateX(-200%);
+    width: 245px;
+    height: 70px;
+    background-color: blue;
+}
+.loader::after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 380px;
+    width: 0;
+    height: 0;
+    border-top: 250px solid transparent;
+    border-right: 300px solid white;
+} 
+
+
+
+
+
+
+ @keyframes spinAnimate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+} 
